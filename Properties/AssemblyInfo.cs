@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Downgrades the priority of CPU-intensive processes.")]
-[assembly: AssemblyDescription("Downgrades the priority of CPU-intensive processes.")]
+[assembly: AssemblyTitle("Balance for the Windows Multi-Tasking")]
+[assembly: AssemblyDescription("Balance for the Windows Multi-Tasking")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Seanox Software Solutions")]
-[assembly: AssemblyProduct("Shiftdown")]
+[assembly: AssemblyProduct("Process Balancer")]
 [assembly: AssemblyCopyright("Copyright © 0000 Seanox Software Solutions")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -2,8 +2,8 @@
 // Folgenden Seanox Software Solutions oder kurz Seanox genannt.
 // Diese Software unterliegt der Version 2 der Apache License.
 //
-// Virtual Environment Shiftdown
-// Downgrades the priority of overactive processes.
+// Process Balancer
+// Balance for the Windows Multi-Tasking
 // Copyright (C) 2022 Seanox Software Solutions
 //
 // Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -26,12 +26,12 @@ using System.Security.Principal;
 using System.ServiceProcess;
 using System.Text.RegularExpressions;
 
-namespace VirtualEnvironment.ShiftDown
+namespace ProcessBalancer
 {
     internal static class Program
     {
         internal static readonly string VERSION =
-            $"Seanox ShiftDown [Version 0.0.0 00000000]{Environment.NewLine}"
+            $"Seanox Process Balancer [Version 0.0.0 00000000]{Environment.NewLine}"
                 + "Copyright (C) 0000 Seanox Software Solutions";
 
         internal struct Meta
