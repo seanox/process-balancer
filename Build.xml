@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<project name="shiftdown" default="usage" basedir=".">
+<project name="balancer" default="usage" basedir=".">
   <target name="usage">
     <echo>Following targets are available:                               </echo>
     <echo>                                                               </echo>
