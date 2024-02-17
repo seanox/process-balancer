@@ -1,8 +1,8 @@
-# ShiftDown
+# Process Balancer (previously ShiftDown)
 My computer with i5 3rd generation (i5 3320M) suffers from the updates from
-Intel and Windows since Meltdown and Spectre were fixed. When the CPU is
-loaded, various IO interfaces have problems, e.g.  access to USB devices and
-sound stutters.
+Intel and Windows since Meltdown and Spectre were fixed. When the CPU is loaded,
+various IO interfaces have problems, e.g. access to USB devices and sound
+stutters.
 
 What helps is to reduce the priority of the processes that generate the load.
 
@@ -16,15 +16,15 @@ The program does not need to be configured, as the functionality is very simple
 
 There is a threshold (default value is 25%) for the maximum CPU load of the
 processes. If any processes exceed this threshold, their priority is first
-reduced to Idle and later increased to BelowNormal when the CPU load falls
-below the threshold -- the procedure has worked for me.
+reduced to Idle and later increased to BelowNormal when the CPU load falls below
+the threshold -- the procedure has worked for me.
 
 If the program is ended, the original priority is restored.
 
 __Against to expectations, the program does not make the computer faster, but
 tries to improve multitasking so that all programs get enough CPU time, without
-application focus and bells and whistles, it's just to improve the work -- but
-I also got and considered your wishes.__
+application focus and bells and whistles, it's just to improve the work -- but I
+also got and considered your wishes.__
 
 
 # Features
@@ -35,42 +35,38 @@ I also got and considered your wishes.__
 - Optional configuration of processes that should always be prioritized down
 - Fast analysis and measurement of the cpu load of all processes
 - Low additional cpu load due to the service itself
-- Includes command line functions to install and uninstall the service, to
+- Includes command line functions to install and uninstall the service, to 
   start, pause, continue and stop the service
 - Logging for the Windows Event Viewer
 
 
 # System Requirement
-- Windows 10 or higher
-- .NET 4.7.x or higher
+- Microsoft Windows 10 or higher
+- Microsoft .NET 4.8 or higher
 
 
 # Download
-The service is [part of the virtual environment](https://github.com/seanox/virtual-environment/tree/main/platform/Resources/platform/Program%20Portables/ShiftDown)
-but can also be downloaded and used separately.
-
-https://github.com/seanox/virtual-environment/releases
+[Seanox Process Balancer 1.3.2](https://github.com/seanox/process-balancer/releases/download/1.3.2/seanox-balancer-1.3.2.zip)  
 
 
 # Usage
-The program is installed as a service, which requires administration
-privileges.
+The program is installed as a service, which requires administration privileges.
 
 ```
-shiftdown.exe install
-shiftdown.exe uninstall
+balancer.exe install
+balancer.exe uninstall
 ```
 
-To update the program: Stop the service, replace the program file (exe) and
-then start the service again.
+To update the program: Stop the service, replace the program file (exe) and then
+start the service again.
 
 The service supports start, pause, continue and stop.
 
 ```
-shiftdown.exe start
-shiftdown.exe pause
-shiftdown.exe continue
-shiftdown.exe stop
+balancer.exe start
+balancer.exe pause
+balancer.exe continue
+balancer.exe stop
 ```
 
 When the program ends, the priority of the changed processes will be restored.
@@ -86,4 +82,4 @@ describes the details.
 BF: Build: Correction of the release info process  
 CR: Platform: Change the location to /Program Portables/ShiftDown  
 
-[Read more](https://raw.githubusercontent.com/seanox/virtual-environment/master/shiftdown/CHANGES)
+[Read more](https://raw.githubusercontent.com/seanox/process-balancer/master/CHANGES)
