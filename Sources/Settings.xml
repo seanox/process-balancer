@@ -12,8 +12,8 @@
 
   <!--
     Number of workers who monitor the prioritization of the processes. They
-    share the monitoring to be able to react faster.
-    In practice, approx. 50 - 75 processes per worker have proven successful.
+    share the monitoring to be able to react faster. In practice, approx. 50 -
+    75 processes per worker have proven successful.
     
     Value Range: 1 - 25 
     Default value: 5
@@ -45,16 +45,20 @@
     automatic prioritization. Prioritization is only resumed when none of the
     processes listed here are running. This is useful for games, compilers,
     renderers and all programs that should use the CPU without restrictions.
+    
     The process names are separated by spaces.
   -->
-  <suspensions></suspensions>
+  <suspensions>
+  </suspensions>
   
   <!--
-    List of process names, also called image names, whose priority is always
-    set to BelowNormal, even if they did not reach the maximum allowed CPU
-    usage before. This is useful when processes like compiler, interpreter and
-    indexer work very well even at low priority.  
+    List of process names, also called image names, whose priority is always set
+    to BelowNormal, even if they did not reach the maximum allowed CPU usage
+    before. This is useful when processes like compiler, interpreter and indexer
+    work very well even at low priority.
+    
     The process names are separated by spaces.
   -->
-  <decreases></decreases>
+  <decreases>
+  </decreases>
 </settings>
