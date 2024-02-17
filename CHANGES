@@ -3,7 +3,7 @@
   CR: Build: Releases are now only available on the release page
   CR: Project: Renaming in Balancer
   CR: Project: Outsourcing as a separate project
-  CR: Project: Update TargetFrameworkVersion to v4.8     
+  CR: Project: Update TargetFrameworkVersion to v4.8
 
 1.3.2 20220625
   BF: Build: Correction of the release info process
