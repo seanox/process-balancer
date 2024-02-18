@@ -64,7 +64,7 @@ also got and considered your wishes.__
 
 
 # Download
-[Seanox Process Balancer 1.3.2](https://github.com/seanox/process-balancer/releases/download/1.3.2/seanox-balancer-1.3.2.zip)  
+[Seanox Process Balancer 1.3.3](https://github.com/seanox/process-balancer/releases/download/1.3.3/seanox-balancer-1.3.3.zip)  
 
 
 # Usage
@@ -96,8 +96,11 @@ describes the details.
 
 
 # Changes
-## 1.3.2 20220625
-BF: Build: Correction of the release info process  
-CR: Platform: Change the location to /Program Portables/ShiftDown  
+## 1.3.3 20240218  
+BF: Review: Optimization and corrections  
+CR: Build: Releases are now only available on the release page  
+CR: Project: Renaming in Balancer  
+CR: Project: Outsourcing as a separate project  
+CR: Project: Update TargetFrameworkVersion to v4.8  
 
 [Read more](https://raw.githubusercontent.com/seanox/process-balancer/master/CHANGES)
