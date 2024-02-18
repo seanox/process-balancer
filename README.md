@@ -1,4 +1,22 @@
-# Process Balancer (previously ShiftDown)
+<p>
+  <!--
+  <a href="https://github.com/seanox/process-balancer/pulls">
+    <img src="https://img.shields.io/badge/development-active-green?style=for-the-badge">
+  </a>
+  --> 
+  <a href="https://github.com/seanox/process-balancer/pulls"
+      title="Development is waiting for new issues / requests / ideas">
+    <img src="https://img.shields.io/badge/development-passive-blue?style=for-the-badge">
+  </a>
+  <a href="https://github.com/seanox/process-balancer/issues">
+    <img src="https://img.shields.io/badge/maintenance-active-green?style=for-the-badge">
+  </a>
+  <a href="http://seanox.de/contact">
+    <img src="https://img.shields.io/badge/support-active-green?style=for-the-badge">
+  </a>
+</p>
+
+# Process Balancer (formerly ShiftDown)
 My computer with i5 3rd generation (i5 3320M) suffers from the updates from
 Intel and Windows since Meltdown and Spectre were fixed. When the CPU is loaded,
 various IO interfaces have problems, e.g. access to USB devices and sound
