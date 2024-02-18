@@ -108,7 +108,7 @@ namespace ProcessBalancer
             AutoLog = false;
 
             _eventLog = new EventLog();
-            _eventLog.Source = Program.ApplicationMeta.Name;
+            _eventLog.Source = typeof(Service).Namespace;
             
             _eventLog.WriteEntry(Program.VERSION, EventLogEntryType.Information);
             _eventLog.WriteEntry("Service initialized.", EventLogEntryType.Information);

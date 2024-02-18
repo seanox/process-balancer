@@ -66,27 +66,27 @@ namespace ProcessBalancer
                     isAdministrator = new WindowsPrincipal(identity).IsInRole(WindowsBuiltInRole.Administrator);
                 
                 var command = (isAdministrator
-                        && ApplicationMeta.Name.Length > 0
                         && options.Length > 0
                     ? options[0] : "").Trim().ToLower();
+                var serviceName = typeof(ProcessBalancer.Program).Namespace;
                 switch (command)
                 {
                     case "install":
-                        BatchExec("sc.exe", "create", ApplicationMeta.Name, $"binpath=\"{ApplicationMeta.Location}\"", "start=auto");
+                        BatchExec("sc.exe", "create", serviceName, $"binpath=\"{ApplicationMeta.Location}\"", "start=auto");
                         break;
                     case "uninstall":
                         BatchExec(new BatchExecMeta()
-                            {FileName = "net.exe", Arguments = new[] {"stop", ApplicationMeta.Name}, Output = false});
-                        BatchExec("sc.exe", "delete", ApplicationMeta.Name);
+                            {FileName = "net.exe", Arguments = new[] {"stop", serviceName}, Output = false});
+                        BatchExec("sc.exe", "delete", serviceName);
                         break;
                     case "start":
                     case "pause":
                     case "continue":
                     case "stop":
-                        BatchExec("net.exe", command, ApplicationMeta.Name);
+                        BatchExec("net.exe", command, serviceName);
                         break;
                     default:
-                        Console.WriteLine($"The program must be configured as a service ({ApplicationMeta.Name}).");
+                        Console.WriteLine($"The program must be configured as a service ({serviceName}).");
                         if (!isAdministrator)
                         {
                             Console.WriteLine();
