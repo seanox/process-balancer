@@ -155,11 +155,14 @@ ${line.separator}${workspace.target.release}/error.log">
     <zip destfile="${workspace.release}/seanox-${ant.project.name}-${release.version}.zip"
         basedir="${workspace.target.release}" compress="true" level="9" filesonly="true"/>
     <touch datetime="${release.date}" pattern="yyyyMMdd" file="${workspace.release}/seanox-${ant.project.name}-${release.version}.zip"/>
-    <copy file="${workspace.target.release}/${ant.project.name}.exe" overwrite="true"
-        todir="../platform/Resources/platform/Program Portables/${ant.project.name}"/>
-    <copy file="${workspace.target.release}/${ant.project.name}.xml" overwrite="true"
-        todir="../platform/Resources/platform/Program Portables/${ant.project.name}"/>
 
+    <replaceregexp file="${workspace}/README.md"
+        match="(Seanox Process ${ant.project.name} )\d+(\.\d+)*" flags="gi" byline="false"
+        replace="\1${release.version}"/>
+    <replaceregexp file="${workspace}/README.md"
+        match="(seanox/process-${ant.project.name}/releases/download/)\d+(?:\.\d+)*(/seanox-${ant.project.name}-)\d+(?:\.\d+)*(\.zip)" flags="g" byline="false"
+        replace="\1${release.version}\2${release.version}\3"/>
+    
     <release-info-reset/>
   </target>
 </project>
